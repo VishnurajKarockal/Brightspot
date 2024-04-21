@@ -14,6 +14,8 @@ Welcome to the documentation for the Brightspot_Chatgpt assignment! This chat ap
 - React Router
 - LocalStorage for client-side storage
 
+You can watch the presentation video [here](https://youtu.be/MLyAcoQUdxg).
+
 ### Installation and Setup
 
 1. Clone the repository.
