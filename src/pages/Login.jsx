@@ -51,7 +51,7 @@ const Login = () => {
     <Box backgroundColor={theme === "dark"? '#212121' : ''} display='flex' justifyContent='center' alignItems='center' minHeight='100vh' >
       <Box backgroundColor={theme === "dark"? '#212121' : ''} boxShadow='rgba(100, 100, 111, 0.2) 0px 7px 29px 0px' display='flex' flexDir='column' gap='30px' width={{ base:'90%', md:'70%', lg:'30%' }} margin='auto' padding='30px' >
         <Box margin='auto' display='flex' flexDir='column' justifyContent='center' gap='10px'>
-          <Image src='..\src\assets\1700403115chatgpt-logo-transparent.png' width='10%' margin='auto' />
+          <Image src='https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/1700403115chatgpt-logo-transparent.png?raw=true' width='10%' margin='auto' />
           <Text textAlign='center' padding='30px' fontSize='2rem' color={theme === "dark"?'white':''}>Welcome Back</Text>
           <Input placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} color={theme === "dark"?'white':''} />
           <Input placeholder='Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} color={theme === "dark"?'white':''}/>
