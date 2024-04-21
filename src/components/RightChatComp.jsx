@@ -10,7 +10,7 @@ const RightChatComp = () => {
     const dispatch = useDispatch();
     const chats = useSelector((state) => state.chats);
     const [inputText, setInputText] = useState('');
-
+    const theme = localStorage.getItem('theme') ;
     const handleAddChat = () => {
         if (inputText.trim() === '') return;
         const id = new Date().getTime(); 
@@ -30,7 +30,7 @@ const RightChatComp = () => {
     };
 
     return (
-        <div style={{ width: '75%' }}>
+        <div style={{ width: '75%', backgroundColor: theme === 'dark' ? '#212121' : '' }}>
             {chats.length ? <ViewChats /> : <DefaultChatTemplate sendMessage={sendMessage} />}
             
             <Box height={'20vh'} display={'flex'} alignItems={'center'} padding={'20px'} gap={'10px'}>
@@ -39,6 +39,7 @@ const RightChatComp = () => {
                     value={inputText}
                     onChange={(e) => setInputText(e.target.value)}
                     onKeyDown={handleKeyPress}
+                    color={theme === 'dark'? 'white':''} 
                 />
                 <Button
                     onClick={handleAddChat}
@@ -49,6 +50,7 @@ const RightChatComp = () => {
                 </Button>
             </Box>
         </div>
+
     );
 };
 

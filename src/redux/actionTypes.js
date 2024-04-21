@@ -4,4 +4,6 @@ export const REMOVE_USER = "REMOVE_USER";
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 
-export const ADD_DATA = "ADD_DATA"
+export const ADD_DATA = "ADD_DATA";
+
+export const TOGGLE_THEME = "TOGGLE_THEME";

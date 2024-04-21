@@ -8,6 +8,8 @@ import { LOGOUT } from '../redux/actionTypes';
 import { useNavigate } from 'react-router-dom';
 
 const LeftChatComponent = () => {
+  const name = localStorage.getItem('name');
+  const theme = localStorage.getItem('theme') ;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const toast = useToast(); // Initialize useToast hook
@@ -55,6 +57,7 @@ const LeftChatComponent = () => {
       display={'flex'}
       flexDir={'column'}
       justifyContent={'space-between'}
+      backgroundColor={theme === "light"?'white':'#171717'}
     >
       {/* Left Component top Box */}
       <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} padding={'0 0 20px'}>
@@ -66,7 +69,8 @@ const LeftChatComponent = () => {
             width={'13%'}
             src={'../src/assets/1700403115chatgpt-logo-transparent.png'}
           />
-          <Text fontWeight={'600'}>New Chat</Text>
+          <Text fontWeight={'600'} color={theme === 'dark' ? 'white' : ''}>New Chat</Text>
+
         </Box>
         <Button onClick={handleOpenUpgradePlanModal}>
           <EditIcon />
@@ -99,7 +103,7 @@ const LeftChatComponent = () => {
             src={'../src/assets/vecteezy_stars-night-solid-line-icon-vector-illustration-logo_7502340-1.jpg'}
           />
           <Box>
-            <Text fontWeight={'600'}>Upgrade plan</Text>
+            <Text fontWeight={'600'} color={theme === 'dark' ? 'white' : ''}>Upgrade plan</Text>
             <Text color={'grey'} fontSize={'.9rem'}>
               Get GPT-4,DALL.E and more
             </Text>
@@ -135,19 +139,20 @@ const LeftChatComponent = () => {
             src={'../src/assets/final_profile.jpg'}
           />
           <Box>
-            <Text fontWeight={'600'}>Vishnuraj K R</Text>
+            <Text fontWeight={'600'} color={theme === 'dark' ? 'white' : ''}>{name}</Text>
           </Box>
         </Box>
         {/* Modal for Vishnuraj K R */}
         <Modal isOpen={isVishnurajModalOpen} onClose={handleCloseVishnurajModal}>
           <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Vishnuraj K R</ModalHeader>
-            <ModalCloseButton />
+          <ModalContent backgroundColor={theme === 'dark'? '#1a1a1a' : ''}>
+            <ModalHeader color={theme === 'dark'?'grey':''}>ChatGPT_3.5</ModalHeader>
+            <ModalCloseButton color={theme === 'dark'?'grey':''}/>
             <ModalBody>
-              {/* Your modal content goes here */}
-              <Text>This is the modal content for Vishnuraj K R.</Text>
-              <Button onClick={() => handleLogout()}>Logout</Button>
+              <Box padding={'20px'}>
+                <Text color={theme === 'dark'?'white':''}>{`Hello  ${name}`}</Text>
+                <Button margin={'30px 0'} onClick={() => handleLogout()}>Logout</Button>
+              </Box>
             </ModalBody>
           </ModalContent>
         </Modal>

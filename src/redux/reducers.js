@@ -1,4 +1,11 @@
-import { ADD_DATA, ADD_USER, LOGIN, LOGOUT, REMOVE_USER } from "./actionTypes";
+import {
+  ADD_DATA,
+  ADD_USER,
+  LOGIN,
+  LOGOUT,
+  REMOVE_USER,
+  TOGGLE_THEME,
+} from "./actionTypes";
 import { combineReducers } from "redux";
 
 const initialUserState = JSON.parse(localStorage.getItem("users")) || [];
@@ -44,8 +51,22 @@ const chatReducer = (state = initialChatState, action) => {
   }
 };
 
+const initialTheme = localStorage.getItem("theme") || "light";
+
+const themeReducer = (state = initialTheme, action) => {
+  switch (action.type) {
+    case TOGGLE_THEME:
+      const curr = state === "light" ? "dark" : "light";
+      localStorage.setItem("theme", curr);
+      return curr;
+    default:
+      return state;
+  }
+};
+
 export const rootReducer = combineReducers({
   users: userReducer,
   login: loginReducer,
   chats: chatReducer,
+  theme: themeReducer,
 });
