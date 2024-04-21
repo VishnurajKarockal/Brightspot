@@ -67,7 +67,7 @@ const LeftChatComponent = () => {
             border={'1px solid grey'}
             padding={'5px'}
             width={'13%'}
-            src={'../src/assets/1700403115chatgpt-logo-transparent.png'}
+            src={'https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/1700403115chatgpt-logo-transparent.png?raw=true'}
           />
           <Text fontWeight={'600'} color={theme === 'dark' ? 'white' : ''}>New Chat</Text>
 
@@ -100,7 +100,7 @@ const LeftChatComponent = () => {
             padding={'5px'}
             width={'11%'}
             height={'11%'}
-            src={'../src/assets/vecteezy_stars-night-solid-line-icon-vector-illustration-logo_7502340-1.jpg'}
+            src={'https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/vecteezy_stars-night-solid-line-icon-vector-illustration-logo_7502340-1.jpg?raw=true'}
           />
           <Box>
             <Text fontWeight={'600'} color={theme === 'dark' ? 'white' : ''}>Upgrade plan</Text>
@@ -136,7 +136,7 @@ const LeftChatComponent = () => {
             border={'1px solid grey'}
             width={'11%'}
             height={'11%'}
-            src={'../src/assets/final_profile.jpg'}
+            src={'https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/final_profile.jpg?raw=true'}
           />
           <Box>
             <Text fontWeight={'600'} color={theme === 'dark' ? 'white' : ''}>{name}</Text>

@@ -49,14 +49,14 @@ const ViewChats = () => {
                 <Box key={i} width={'70%'} margin={'auto'} marginBottom="20px">
                     <Box id='User' padding={'20px'}>
                         <Box display={'flex'} alignItems={'center'} gap={'10px'}>
-                            <Image src='..\src\assets\final_profile.jpg' width={'3%'} borderRadius={'50%'} />
+                            <Image src='https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/final_profile.jpg?raw=true' width={'3%'} borderRadius={'50%'} />
                             <Text fontSize={'1.1rem'} fontWeight={'600'} color={theme === 'dark'? '#c1c1c1':''} >You</Text>
                         </Box>
                         <Text marginLeft={'30px'} color={theme === 'dark'? 'white':''} >{ele.text}</Text>
                     </Box>
                     <Box id='gpt' padding={'20px'}>
                         <Box display={'flex'} alignItems={'center'} gap={'10px'}>
-                            <Image src='..\src\assets\1700403115chatgpt-logo-transparent.png' width={'3%'} borderRadius={'50%'} />
+                            <Image src='https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/1700403115chatgpt-logo-transparent.png?raw=true' width={'3%'} borderRadius={'50%'} />
                             <Text fontSize={'1.1rem'} fontWeight={'600'} color={theme === 'dark'? '#c1c1c1':''} >ChatGPT</Text>
                         </Box>
                         <Text marginLeft={'30px'} color={theme === 'dark'? 'white':''} >Hello! How can I help you today?</Text>

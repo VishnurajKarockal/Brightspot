@@ -44,7 +44,7 @@ const SignUp = () => {
 
       >
         <Box margin="auto" display="flex" flexDir="column" justifyContent="center" gap="10px">
-          <Image src="..\src\assets\1700403115chatgpt-logo-transparent.png" width="10%" margin="auto" />
+          <Image src="https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/1700403115chatgpt-logo-transparent.png?raw=true" width="10%" margin="auto" />
           <Text textAlign="center" padding="30px" fontSize="2rem" color={theme === "dark"?'white':''}>
             Create an Account
           </Text>

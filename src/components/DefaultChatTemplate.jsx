@@ -25,7 +25,7 @@ const DefaultChatTemplate = ({ sendMessage }) => {
                 <Switch isChecked={theme == 'dark'} onChange={() => handleToggle()} padding={'20px'} colorScheme='gray' size='lg' />
             </Box>
             <Box  height={'33.3%'} width={'100%'} textAlign={'center'} display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-                <Image width={'5%'} src='..\src\assets\1700403115chatgpt-logo-transparent.png' />
+                <Image width={'5%'} src='https://github.com/VishnurajKarockal/Brightspot/blob/main/src/assets/1700403115chatgpt-logo-transparent.png?raw=true' />
                 <Text fontSize={'1.5rem'} fontWeight={'600'} color={theme === 'dark'? 'white':''} >How can I Help You Today?</Text>
             </Box>
             <Grid height={'33.3%'} margin={'auto'} width={'80%'} gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)', lg: 'repeat(2,1fr)' }} justifyItems={'center'} padding={'10px'} gap={'10px'}>
