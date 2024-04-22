@@ -14,8 +14,10 @@ const RightChatComp = () => {
     const handleAddChat = () => {
         if (inputText.trim() === '') return;
         const id = new Date().getTime(); 
-        dispatch({ type: ADD_DATA, payload: { id, text: inputText } });
-        setInputText('');
+        setTimeout(() => {
+            dispatch({ type: ADD_DATA, payload: { id, text: inputText } });
+            setInputText('');
+        }, 1000);
     };
 
     const handleKeyPress = (e) => {
